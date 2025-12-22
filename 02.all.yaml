@@ -1,0 +1,4 @@
+kind: namespace
+apiVersion:v1alpha5
+metadata:
+ name: expense
