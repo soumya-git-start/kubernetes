@@ -5,8 +5,12 @@ metadata:
   name: expense
   region: us-east-1
 
-mangedNodeGroups:
+managedNodeGroups:
   - name: ng-1
-    instanceType: ["c3.large","c4.large","c5.large","m5.large"]
+    instanceTypes:
+      - c5.large
+      - m5.large
+      - c6a.large
+      - m6a.large
     desiredCapacity: 3
     spot: true
