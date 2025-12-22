@@ -1,0 +1,12 @@
+kind: pod
+apiVersion: v1alpha5
+metadat:
+ name: labels
+ labels: 
+   environemnt: dev
+   annaotations:
+    imageregistry: https://registry-1.docker.io 
+spec: 
+ containers: 
+  -name: niginx
+  image: nginx
