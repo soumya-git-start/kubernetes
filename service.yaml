@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: Service
 spec:
-  selectors:
+  selector:
     project: expense
     environmet: dev
   ports:
@@ -23,5 +23,4 @@ spec:
   containers:
     - name: nginx
       image: nginx
-      port:
-        containerPort: 80
+      
