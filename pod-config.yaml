@@ -6,7 +6,7 @@ spec:
   containers:
     - name: nginx
       image: nginx
-  envfrom: 
-    - ConfigMap:
-      name: ConfigMap
+      envfrom: 
+        - ConfigMap:
+           name: ConfigMap
      
