@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: Service
+  name: service
 spec:
   selector:
     project: expense
