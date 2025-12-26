@@ -15,9 +15,9 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: pod-service
-labels:
-  project: expense
-  environemnt: dev
+  labels:
+    project: expense
+    environemnt: dev
 spec:
   containers:
     - name: nginx
