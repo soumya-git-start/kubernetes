@@ -5,20 +5,23 @@ metadata:
 spec:
   selectors:
     project: expense
-    environemnt: dev
+    environmet: dev
   ports:
     - protocol: TCP
       port: 80 #service port
       targetport: 80
 ---
+
 kind: Pod
 apiVersion: v1
 metadata:
   name: pod-service
   labels:
     project: expense
-    environemnt: dev
+    environmet: dev
 spec:
   containers:
     - name: nginx
-      image: ngnix
+      image: nginx
+      port:
+        containerPort: 80
