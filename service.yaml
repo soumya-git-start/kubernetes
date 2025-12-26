@@ -7,9 +7,9 @@ spec:
     project: expense
     environemnt: dev
   ports:
-  - protocol: TCP
-    port: 80 #service port
-    targetport: 80
+    - protocol: TCP
+      port: 80 #service port
+      targetport: 80
 ---
 kind: Pod
 apiVersion: v1
