@@ -1,7 +1,7 @@
 kind: ConfigMap
 apiVersion: v1
 metadata: 
-  name: ConfigMap
+  name: configmap
   data:
    - name: Dhrithi
      value: "I am 5 years old"
