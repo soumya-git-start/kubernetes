@@ -1,4 +1,4 @@
-kind: pod
+kind: Pod
 apiVersion: v1
 metadata: 
   name: pod-configMap
@@ -7,6 +7,6 @@ spec:
     - name: nginx
       image: nginx
   envfrom: 
-    - configMap: 
-      name: configMap
+    - ConfigMap:
+      name: ConfigMap
      

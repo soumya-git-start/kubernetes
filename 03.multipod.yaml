@@ -1,4 +1,4 @@
-kind: pod
+kind: Pod
 apiVersion: v1alpha5
 metadat:
  name: labels
