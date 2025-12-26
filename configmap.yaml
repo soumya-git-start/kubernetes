@@ -3,7 +3,7 @@ apiVersion: v1
 metadata: 
   name: configmap
   data:
-   - name: Dhrithi
+   - name: drithi
      value: "I am 5 years old"
 
       
