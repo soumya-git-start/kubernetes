@@ -4,7 +4,7 @@ metadat:
  name: labels
  labels: 
    environemnt: dev
-   annaotations:
+   annotations:
     imageregistry: https://registry-1.docker.io 
 spec: 
  containers: 
