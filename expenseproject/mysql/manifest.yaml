@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: expenseinfra
+  labels:
+    app: mysql
+    tier: mysql
+    project: expense
+spec:
+  # modify replicas according to your case
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+      tier: mysql
+      project: expense
+  template:
+    metadata:
+      labels:
+        app: mysql
+        tier: mysql
+        project: expense
+    spec:
+      containers:
+      - name: nginx
+        image: joindevops/mysql:1.0.0
+        
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: service
+spec:
+  selector:
+    app: mysql
+    tier: mysql
+    project: expense
+  ports:
+    - protocol: TCP
+      port: 80 #service port
+      targetPort: 80
+      
