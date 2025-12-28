@@ -40,6 +40,6 @@ spec:
     project: expense
   ports:
     - protocol: TCP
-      port: 80 #service port
-      targetPort: 80
+      port: 3306 #service port
+      targetPort: 3306
       
