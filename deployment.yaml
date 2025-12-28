@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: replicaset
+  labels:
+    app: frontend
+    tier: web
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: frontend
+        tier: web
+    spec:
+      containers:
+      - name: nginx
+        image: soumyadhrithi123/deployment:1
+        kind: Service
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: loadbalacer
+spec:
+  type: LoadBalancer
+  selector:
+        app: frontend
+        tier: web
+  ports:
+    - protocol: TCP
+      port: 80 #service port
+      targetPort: 80
+      nodePort: 30008
