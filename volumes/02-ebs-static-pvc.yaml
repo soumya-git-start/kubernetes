@@ -10,3 +10,22 @@ spec:
   resources:
     requests:
       storage: 5Gi
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+spec:
+  containers:
+  - name: ngnix
+    image: ngnix
+    volumeMounts:
+    - name: persistent-storage
+      mountPath: /usr/shar/nginx/html
+  volumes:
+  - name: persistent-storage
+    persistentVolumeClaim:
+      claimName: ebs-static-pvc    
+
+
+    
